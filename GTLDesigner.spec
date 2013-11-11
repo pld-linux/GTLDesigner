@@ -2,7 +2,7 @@ Summary:	Graphics Transfomation Languages Designer
 Summary(pl.UTF-8):	Narzędzie do projektowania dla języków przekształceń graficznych GTL
 Name:		GTLDesigner
 Version:	0.9.2
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		X11/Applications/Graphics
 Source0:	http://download.opengtl.org/%{name}-%{version}.tar.bz2
@@ -17,7 +17,6 @@ BuildRequires:	kde4-kdelibs-devel >= 4
 BuildRequires:	libQtGTL-devel >= 0.9.0
 BuildRequires:	pkgconfig
 BuildRequires:	qt4-build >= 4
-Requires:	%{name}-libs = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
