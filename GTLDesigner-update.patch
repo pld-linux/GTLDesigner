@@ -1,0 +1,13 @@
+--- GTLDesigner-0.9.2/src/gtldesigner.cpp.orig	2010-02-23 17:30:57.000000000 +0100
++++ GTLDesigner-0.9.2/src/gtldesigner.cpp	2013-11-11 15:04:39.807759945 +0100
+@@ -313,8 +313,8 @@
+     inputDOD.push_back( region );
+   }
+   OpenShiva::Kernel* kernel = new OpenShiva::Kernel(4);
+-  if( maxHeight != -1 ) kernel->setHint(OpenShiva::Kernel::IMAGE_HEIGHT, GTLCore::Value((float)maxHeight));
+-  if( maxWidth != -1 ) kernel->setHint(OpenShiva::Kernel::IMAGE_WIDTH, GTLCore::Value((float)maxWidth));
++  if( maxHeight != -1 ) kernel->setParameter(OpenShiva::Kernel::IMAGE_HEIGHT, GTLCore::Value((float)maxHeight));
++  if( maxWidth != -1 ) kernel->setParameter(OpenShiva::Kernel::IMAGE_WIDTH, GTLCore::Value((float)maxWidth));
+   kernel->setSource(m_document->text().toAscii().data());
+   kernel->compile();
+   if(kernel->isCompiled())
